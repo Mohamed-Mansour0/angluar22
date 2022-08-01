@@ -1,0 +1,15 @@
+#boody{
+  margin: 120px 0px;
+  padding: 80px 0px;
+  width: 100%;
+
+  color: black;
+  background-color: gray;
+}
+#boody table{
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 400;
+font-family: 'Times New Roman', Times, serif;
+
+}

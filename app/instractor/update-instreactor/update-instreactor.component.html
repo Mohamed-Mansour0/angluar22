@@ -1,0 +1,29 @@
+<h1>Update instructor Info</h1>
+
+<div id="ubody">
+  <div class="container col-6">
+    <div class="card">
+      <div *ngIf="UserName.invalid || course.invalid || age.invalid " class="alert alet-danger">
+
+      </div>
+
+      <div class="card-body">
+        <div class="form-group">
+          <label >manager Name : <span>{{errors}}</span></label>
+          <input class="form-control" [(ngModel)]="object.name" #UserName="ngModel" required type="text" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label >course : <span>{{errors}}</span></label>
+          <input class="form-control" [(ngModel)]="object.course"  #course="ngModel" required  type="text" placeholder="course">
+        </div>
+
+        <div class="form-group">
+          <label >age : <span>{{errors}}</span></label>
+          <input class="form-control" [(ngModel)]="object.age"  #age="ngModel" required type="text" placeholder="age">
+        </div>
+        <button (click)="update()" class="btn btn-info">Send Data</button>
+      </div>
+    </div>
+  </div>
+
+</div>

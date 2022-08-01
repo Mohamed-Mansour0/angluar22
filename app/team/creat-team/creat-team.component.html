@@ -1,0 +1,27 @@
+<div id="cbody">
+  <div class="container col-6">
+    <div class="card">
+      <div *ngIf="UserName.invalid || level.invalid || number.invalid " class="alert alet-danger">
+
+      </div>
+
+      <div class="card-body">
+        <div class="form-group">
+          <label >User Name : <span>{{errors}}</span></label>
+          <input class="form-control" [(ngModel)]="object.name" #UserName="ngModel" required type="text" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label >specific : <span>{{errors}}</span></label>
+          <input class="form-control" [(ngModel)]="object.specific"  #level="ngModel" required  type="text" placeholder="level">
+        </div>
+
+        <div class="form-group">
+          <label >number : <span>{{errors}}</span></label>
+          <input class="form-control" [(ngModel)]="object.number"  #number="ngModel" required type="text" placeholder="number">
+        </div>
+        <button (click)="save(UserName,level,number)" class="btn btn-info">Send Data</button>
+      </div>
+    </div>
+  </div>
+
+</div>
